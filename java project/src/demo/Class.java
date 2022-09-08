@@ -9,5 +9,9 @@ float z=y;
 System.out.println();
 // A a = new A();
 	}
+	public static void forName(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
