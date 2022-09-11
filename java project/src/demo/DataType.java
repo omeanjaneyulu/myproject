@@ -7,7 +7,7 @@ int k=i*j;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 DataType a=new DataType();
-System.out.println(a.i+a.j);
+
 System.out.println(a.k);
 	}
 

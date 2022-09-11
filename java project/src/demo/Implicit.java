@@ -1,9 +1,8 @@
 package demo;
 
-public class A{
+public class Implicit {
 
 
-		
 		int x = 6;
 		long y = x;
 		float z = y;
@@ -11,6 +10,6 @@ public class A{
 				// TODO Auto-generated method stub
 		A a =new A();
 		System.out.println(a.x);
-			}
+	}
 
 }
