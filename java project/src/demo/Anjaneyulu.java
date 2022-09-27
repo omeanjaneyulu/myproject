@@ -12,20 +12,7 @@ int sum(int a,int b) {
 String str = "Anjaneyulu";
 char[] ch = str.toCharArray();
 System.out.println(str.toCharArray());
-System.out.println("length of the string:"+str.length());{
-for(int i=0;i<str.length();i++){
+System.out.println("length of the string:"+str.length());
+}
+}
 	
-for (int j=i+1;j<str.length();j++)
-{
-	
-}
-
-	// if(ch[j] == ch[i]);
-	 
-	{
-	//System.out.println("Repeated character: "+ch[j]);
-	}
-}
-}
-}
-	}

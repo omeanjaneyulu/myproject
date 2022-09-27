@@ -1,9 +1,9 @@
 package demo;
 
 public class SingleInheritance {
-	int i,j;
+ int  i,j;
 	public void methodone() {
-		i=2;
-		j=5;
+		int i=2;
+	int	j=5;
 	}
 }

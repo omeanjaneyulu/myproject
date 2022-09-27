@@ -14,9 +14,9 @@ public class DBoperation {
 	public DBoperation() {
 		connection = MysqlConnection.getInstance();
 	}
-	public int insertDataWithStatement(Employee emp) {
+	public int insertDataWithStatement(EmployeeBean em) {
 		int result = 0;
-		String query = "insert into Employee values("+emp.getId()+",'"+emp.getName()+"',"+emp.getSalary()+",'"+emp.getAddress()+"')";
+		String query = "insert into EmployeeBean values("+em.getEmployeeId()+",'"+em.getFirstName()+"','"+em.getLastName()+"','"+em.getFatherName()+"')";
 		
 		try {
 			statement = connection.createStatement();
@@ -31,51 +31,52 @@ public class DBoperation {
 		
 	}
 	
-	public int deletedata(Employee emp) {
-		int result = 0;
-		String query = "update Employee set id="+emp.getId()+" where id=7 ";
-		try {
-		statement = connection.createStatement();
-		result = statement.executeUpdate(query);
-		
-		}catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return result;
-	}
+//	public int deletedata(Employee emp) {
+//		int result = 0;
+//		String query = "update EmployeeBean set id="+emp.getId()+" where id=7 ";
+//		try {
+//		statement = connection.createStatement();
+//		result = statement.executeUpdate(query);
+//		
+//		}catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return result;
+//	}
 	
 	public static void main(String[] args) {
 	DBoperation db = new DBoperation();
 	Scanner sc = new Scanner(System.in);
-	for(;;) {
-		System.out.println("please enter your choice=\n"+
-	"1.update employee data \n"+
-	"2.delete employee data");
+	//for(;;) {
+//		System.out.println("please enter your choice=\n"+
+//	"1.update employeeBean data \n"+
+//	"2.delete employeeBean data");
 		
-	int n = sc.nextInt();
+//	int n = sc.nextInt();
 	
 		
-	Employee em = new Employee();
-	switch(n) {
-	case 1:
+	EmployeeBean em = new EmployeeBean();
+//	switch(n) {
+	//case 1:
 		System.out.println("please enter emp id");
-		em.setId(sc.nextInt());
-		sc.nextLine();
-		System.out.println("please enter name");
-		em.setName(sc.nextLine());
-		System.out.println("please enter salary");
-		em.setSalary(sc.nextDouble());
-		sc.nextLine();
-		System.out.println("please enter address");
-		em.setAddress(sc.nextLine());
+		em.setEmployeeId(sc.nextLine());
+	//	sc.nextLine();
+		System.out.println("please enter first name");
+		em.setFirstName(sc.nextLine());
+		System.out.println("please enter lastName");
+		em.setLastName(sc.nextLine());
+		System.out.println("please enter fatherName");
+		em.setFatherName(sc.nextLine());
+	//	sc.nextLine();
+
 		db.insertDataWithStatement(em);
 
 	
-	break;
-	case 2:
-		System.out.println("please enter id to be deleted");
-		em.setId(sc.nextInt());
-		db.deletedata(em);
+	//break;
+//	case 2:22
+	//	System.out.println("please enter id to be deleted");
+	//	em.setEmployeeBeanId(sc.nextInt());
+	//	db.deletedata(em);
 	}
 /*		
 	System.out.println("please enter emp id");
@@ -92,6 +93,6 @@ db.insertDataWithStatement(em);
 
 	}*/
 
-	}
+	
 }
-}
+

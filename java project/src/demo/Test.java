@@ -6,8 +6,10 @@ public class Test {
 		// TODO Auto-generated method stub
 String s1 = "manu";
 String emailid = "manu26@gmail.com";
-System.out.println(s1);
-System.out.println(emailid);
+String s2 = new String("ome");
+System.out.println(s1+emailid);
+System.out.println(s2);
+
 	}
 
 }
